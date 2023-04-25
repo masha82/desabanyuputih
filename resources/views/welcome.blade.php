@@ -22,7 +22,7 @@
                                   data-animate-in="fadeInUp">
                                 <div class="fw-bold" style="color:#1a9256">DESA BANYUPUTIH</div>
                                 {{-- <div class="fw-bold" style="color:#AA9B4E">BANYUPUTIH</div> --}}
-                                <div class="fw-bold" style="color:#6572ec">KABUPATEN</div>
+                                <div class="fw-bold" style="color:#6572ec">KABUPATENN</div>
                                 <div class="fw-bold" style="color:#6572ec">SITUBONDO</div>
                             </span>
                         </h1>
