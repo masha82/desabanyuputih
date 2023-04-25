@@ -8,11 +8,10 @@
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
                     <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">BERITA KORPRI</h2>
-                    
+
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="container clearfix">
         <div class="row gutter-40 col-mb-80">

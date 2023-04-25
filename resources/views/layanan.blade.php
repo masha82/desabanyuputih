@@ -11,8 +11,8 @@
                     <h2 class="nott center ls0 gradient-text gradient-horizon">LAYANAN KORPRI KABUPATEN SITUBONDO</h2>
                 </div>
                 <div class="row">
-                    @if (!empty($layanan->file))    
-                    <img src="{{ asset('layanan/' . $layanan->file) }}" alt="FAQs" class="px-5 mt-4">
+                    @if (!empty($layanan->file))
+                        <img src="{{ asset('layanan/' . $layanan->file) }}" alt="FAQs" class="px-5 mt-4">
                     @endif
                 </div>
             </div>

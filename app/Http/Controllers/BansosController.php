@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kegiatan;
 use App\Models\KegiatanBansos;
 use App\Traits\Table;
 use Carbon\Carbon;
@@ -16,17 +17,12 @@ class BansosController extends Controller
      * @return \Illuminate\Http\Response
      */
     use Table;
+
     protected $model = KegiatanBansos::class;
+
     public function index(Request $request)
     {
-        if ($request->ajax()) {
-            return DataTables::of(KegiatanBansos::query())
-                ->addColumn('tgl_keg', function ($data) {
-                    return Carbon::parse($data->tgl_keg)->isoFormat('dddd, D MMMM Y');
-                })
-                ->make(true);
-        }
-        return view('bansos');
+
     }
 
     /**
@@ -42,7 +38,7 @@ class BansosController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -55,18 +51,26 @@ class BansosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, Request $request)
     {
-        //
+        $bansos = Kegiatan::findOrfail($id);
+        if ($request->ajax()) {
+            return DataTables::of(KegiatanBansos::where('id_kegiatan', $id))
+                ->addColumn('tgl_keg', function ($data) {
+                    return Carbon::parse($data->tgl_keg)->isoFormat('dddd, D MMMM Y');
+                })
+                ->make(true);
+        }
+        return view('bansos', compact('bansos'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -77,8 +81,8 @@ class BansosController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -89,7 +93,7 @@ class BansosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
 

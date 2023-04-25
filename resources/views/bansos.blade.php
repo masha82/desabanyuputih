@@ -10,16 +10,17 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
-                    <h2 class="gradient-text center gradient-horizon">DAFTAR KEGIATAN KORPRI KABUPATEN SITUBONDO</h2>
+                    <h2 class="gradient-text center gradient-horizon">DAFTAR KEGIATAN {{strtoupper($bansos->master_kegiatan)}}
+                        KABUPATEN SITUBONDO</h2>
                     <br>
                 </div>
                 <table class="table table-striped" id="myTable">
                     <thead>
-                        <tr>
-                            <th>TANGGAL</th>
-                            <th>TEMPAT</th>
-                            <th>KETERANGAN KEGIATAN</th>
-                        </tr>
+                    <tr>
+                        <th>TANGGAL</th>
+                        <th>TEMPAT</th>
+                        <th>KETERANGAN KEGIATAN</th>
+                    </tr>
                     </thead>
                     <tbody>
 
@@ -34,15 +35,15 @@
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#myTable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('bansos.index') }}",
+                ajax: "{{ route('bansos.show',$bansos->id) }}",
                 columns: [{
-                        data: 'tgl_keg',
-                        name: 'tgl_keg'
-                    },
+                    data: 'tgl_keg',
+                    name: 'tgl_keg'
+                },
                     {
                         data: 'tempat',
                         name: 'tempat'

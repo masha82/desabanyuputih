@@ -16,25 +16,29 @@
                     <div class="entry-meta d-flex justify-content-between mb-4">
                         <ul>
                             <li><span>Kategori:</span> {{$data->kategori}}</li>
-                            <li><i class="icon-time"></i><a href="#">{{ \Carbon\Carbon::parse($data->created_at)->isoFormat('dddd, D MMMM Y') }}</a></li>
+                            <li><i class="icon-time"></i><a
+                                    href="#">{{ \Carbon\Carbon::parse($data->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
+                            </li>
                         </ul>
-                       
+
                     </div>
 
                     <div class="entry-image">
-                        <a href="demo-news-single.html"><img src="{{asset('screenshot/' . $data->thumbnail)}}" alt="Image 3"></a>
+                        <a href="demo-news-single.html"><img src="{{asset('screenshot/' . $data->thumbnail)}}"
+                                                             alt="Image 3"></a>
 
                     </div>
 
                     <div class="entry-content mt-0">
 
-                       {!! $data->isi!!}
+                        {!! $data->isi!!}
                     </div>
- <div class="entry-content">
-                                        <a href="{{asset('dokumen/'.$data->file)}}" target="_blank" class="button button-border button-rounded">Unduh file</a>
-                                    </div>
+                    <div class="entry-content">
+                        <a href="{{asset('dokumen/'.$data->file)}}" target="_blank"
+                           class="button button-border button-rounded">Unduh file</a>
+                    </div>
                 </div>
-            
+
             </div>
 
             <!-- Top Sidebar Area
@@ -50,14 +54,16 @@
                                 <article class="entry col-12">
                                     <div class="grid-inner row gutter-20">
                                         <div class="col-md-4">
-                                            <a class="entry-image" href="#"><img src="{{ asset('screenshot/' . $item->thumbnail) }}"
+                                            <a class="entry-image" href="#"><img
+                                                    src="{{ asset('screenshot/' . $item->thumbnail) }}"
                                                     alt="Image"></a>
                                         </div>
                                         <div class="col-md-8">
                                             <div class="entry-title title-xs">
                                                 {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div> --}}
                                                 <h3><a href="{{route('news.show', $item->id)}}"
-                                                        class="stretched-link color-underline">{{ $item->judul }}</a></h3>
+                                                       class="stretched-link color-underline">{{ $item->judul }}</a>
+                                                </h3>
                                             </div>
                                             <div class="entry-meta">
                                                 <ul>

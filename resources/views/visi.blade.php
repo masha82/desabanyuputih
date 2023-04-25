@@ -11,7 +11,8 @@
                     <h4 class="gradient-text gradient-horizon">VISI KORPRI: </h4>
                     <p>Terwujudnya KORPRI sebagai organisasi yang kuat, netral mandiri, profesional dan terdepan dalam
                         menjaga
-                        persatuan dan kesatuan bangsa, mensejahterakan anggota, masyarakat dan melindungi kepentingan para
+                        persatuan dan kesatuan bangsa, mensejahterakan anggota, masyarakat dan melindungi kepentingan
+                        para
                         anggota
                         agar
                         lebih profesional didalam membangun Pemerintahan yang baik.</p>

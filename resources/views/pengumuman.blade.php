@@ -7,12 +7,11 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">INFORMASI/PENGUMUMAN TERKAIT KORPRI KABUPATEN SITUBONDO</h2>
-                    </h4>
+                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">INFORMASI/PENGUMUMAN TERKAIT KORPRI
+                        KABUPATEN SITUBONDO</h2>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="container clearfix">
         <div class="row gutter-40 col-mb-80">
@@ -42,7 +41,8 @@
                                         </ul>
                                     </div>
                                     <div class="entry-content">
-                                        <a href="{{route('info.show', $item->id)}}" class="button button-border button-rounded">Baca selengkapnya</a>
+                                        <a href="{{route('info.show', $item->id)}}"
+                                           class="button button-border button-rounded">Baca selengkapnya</a>
                                     </div>
                                 </div>
                             </div>

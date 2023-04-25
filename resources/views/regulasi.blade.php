@@ -10,18 +10,19 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="heading-block mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">REGULASI YANG BERKAITAN DENGAN KORPRI</h2>
+                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">REGULASI YANG BERKAITAN DENGAN
+                        KORPRI</h2>
                 </div>
                 <div>
                     <table class="table table-striped" id="myTable">
                         <thead>
-                            <tr>
-                                <th>JUDUL REGULASI</th>
-                                <th>NOMOR</th>
-                                <th>TAHUN</th>
-                                <th>JENIS</th>
-                                <th>UNDUH</th>
-                            </tr>
+                        <tr>
+                            <th>JUDUL REGULASI</th>
+                            <th>NOMOR</th>
+                            <th>TAHUN</th>
+                            <th>JENIS</th>
+                            <th>UNDUH</th>
+                        </tr>
                         </thead>
                         <tbody>
 
@@ -36,15 +37,15 @@
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#myTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('regulasi.index') }}",
                 columns: [{
-                        data: 'judul',
-                        name: 'judul'
-                    },
+                    data: 'judul',
+                    name: 'judul'
+                },
                     {
                         data: 'nomor',
                         name: 'nomor'

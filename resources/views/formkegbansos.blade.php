@@ -18,12 +18,12 @@
                     @endif
                     <div class="col-lg-6">
                         <form class="row" action="{{ route('bansos.store') }}" method="post"
-                            enctype="multipart/form-data">
+                              enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label for="sel1">Nama Kegiatan:</label>
-                                <select class="form-control" name="status" id="status"">
+                                <select class="form-control" name="id_kegiatan" id="id_kegiatan">
                                     <option><label>-- Pilih Salah Satu --</label></option>
                                     <option value="1">Korpri Peduli</option>
                                     <option value="2">HUT Korpri</option>
@@ -58,13 +58,13 @@
                     <div>
                         <table class="table table-striped" id="myTable">
                             <thead>
-                                <tr>
-                                    <th>NAMA KEGIATAN</th>
-                                    <th>TANGGAL</th>
-                                    <th>TEMPAT</th>
-                                    <th>KETERANGAN KEGIATAN</th>
-                                    <th>Aksi</th>
-                                </tr>
+                            <tr>
+                                <th>NAMA KEGIATAN</th>
+                                <th>TANGGAL</th>
+                                <th>TEMPAT</th>
+                                <th>KETERANGAN KEGIATAN</th>
+                                <th>Aksi</th>
+                            </tr>
                             </thead>
                             <tbody>
 
@@ -74,7 +74,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 @endsection
 @push('js')
@@ -82,15 +81,15 @@
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#myTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('bansos.data') }}",
                 columns: [{
-                        data: 'id_kegiatan',
-                        name: 'id_kegiatan'
-                    },
+                    data: 'kegiatan.master_kegiatan',
+                    name: 'kegiatan.master_kegiatan'
+                },
                     {
                         data: 'tgl_keg',
                         name: 'tgl_keg'
@@ -114,7 +113,7 @@
             $('.datepicker').datepicker({
                 format: 'yyyy-mm-dd'
             });
-            var del = function(id) {
+            var del = function (id) {
                 Swal.fire({
                     title: 'Apakah anda yakin?',
                     text: "Data yang sudah terhapus tidak bisa dikembalikan lagi!",
@@ -128,7 +127,7 @@
                         $.ajax({
                             url: "{{ route('bansos.index') }}/" + id,
                             method: "DELETE",
-                            success: function(response) {
+                            success: function (response) {
                                 table.ajax.reload();
                                 Swal.fire(
                                     'Terhapus!',
@@ -136,7 +135,7 @@
                                     'sukses'
                                 )
                             },
-                            failure: function(response) {
+                            failure: function (response) {
                                 swal(
                                     "Internal Error",
                                     "Oops, your note was not saved.", // had a missing comma
@@ -147,7 +146,7 @@
                     }
                 })
             };
-            $('body').on('click', '.hapus-data', function() {
+            $('body').on('click', '.hapus-data', function () {
                 del($(this).attr('data-id'));
             });
         });

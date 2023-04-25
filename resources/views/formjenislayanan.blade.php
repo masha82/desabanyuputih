@@ -18,7 +18,7 @@
                     @endif
                     <div class="col-lg-6">
                         <form class="row" action="{{ route('services.store') }}" method="post"
-                            enctype="multipart/form-data">
+                              enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
@@ -53,10 +53,10 @@
                     <div>
                         <table class="table table-striped" id="myTable">
                             <thead>
-                                <tr>
-                                    <th>Nama Jenis Layanan</th>
-                                    <th>Aksi</th>
-                                </tr>
+                            <tr>
+                                <th>Nama Jenis Layanan</th>
+                                <th>Aksi</th>
+                            </tr>
                             </thead>
                             <tbody>
 
@@ -66,7 +66,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 @endsection
 @push('js')
@@ -74,15 +73,15 @@
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#myTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('services.data') }}",
                 columns: [{
-                        data: 'nama',
-                        name: 'nama'
-                    },
+                    data: 'nama',
+                    name: 'nama'
+                },
                     {
                         data: 'action',
                         name: 'action',
@@ -91,7 +90,7 @@
                     },
                 ]
             });
-            var del = function(id) {
+            var del = function (id) {
                 Swal.fire({
                     title: 'Apakah anda yakin?',
                     text: "Data yang sudah terhapus tidak bisa dikembalikan lagi!",
@@ -105,7 +104,7 @@
                         $.ajax({
                             url: "{{ route('services.index') }}/" + id,
                             method: "DELETE",
-                            success: function(response) {
+                            success: function (response) {
                                 table.ajax.reload();
                                 Swal.fire(
                                     'Terhapus!',
@@ -113,7 +112,7 @@
                                     'sukses'
                                 )
                             },
-                            failure: function(response) {
+                            failure: function (response) {
                                 swal(
                                     "Internal Error",
                                     "Oops, your note was not saved.", // had a missing comma
@@ -124,7 +123,7 @@
                     }
                 })
             };
-            $('body').on('click', '.hapus-data', function() {
+            $('body').on('click', '.hapus-data', function () {
                 del($(this).attr('data-id'));
             });
             $('.summernote').summernote({

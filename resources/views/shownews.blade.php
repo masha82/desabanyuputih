@@ -16,9 +16,11 @@
                     <div class="entry-meta d-flex justify-content-between mb-4">
                         <ul>
                             <li><span>Editor:</span> {{$data->editor}}</li>
-                            <li><i class="icon-time"></i><a href="#">{{ \Carbon\Carbon::parse($data->created_at)->isoFormat('dddd, D MMMM Y') }}</a></li>
+                            <li><i class="icon-time"></i><a
+                                    href="#">{{ \Carbon\Carbon::parse($data->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
+                            </li>
                         </ul>
-                       
+
                     </div>
 
                     <div class="entry-image">
@@ -28,11 +30,11 @@
 
                     <div class="entry-content mt-0">
 
-                       {!! $data->isi!!}
+                        {!! $data->isi!!}
                     </div>
 
                 </div>
-            
+
             </div>
 
             <!-- Top Sidebar Area
@@ -48,14 +50,16 @@
                                 <article class="entry col-12">
                                     <div class="grid-inner row gutter-20">
                                         <div class="col-md-4">
-                                            <a class="entry-image" href="#"><img src="{{ asset('gambar/' . $item->file) }}"
+                                            <a class="entry-image" href="#"><img
+                                                    src="{{ asset('gambar/' . $item->file) }}"
                                                     alt="Image"></a>
                                         </div>
                                         <div class="col-md-8">
                                             <div class="entry-title title-xs">
                                                 {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div> --}}
                                                 <h3><a href="{{route('news.show', $item->id)}}"
-                                                        class="stretched-link color-underline">{{ $item->judul }}</a></h3>
+                                                       class="stretched-link color-underline">{{ $item->judul }}</a>
+                                                </h3>
                                             </div>
                                             <div class="entry-meta">
                                                 <ul>

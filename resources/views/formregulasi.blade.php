@@ -18,7 +18,7 @@
                     @endif
                     <div class="col-lg-6">
                         <form class="row" action="{{ route('hukum.store') }}" method="post"
-                            enctype="multipart/form-data">
+                              enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label">Upload Dokumen:</label>
-                                <input type="file" class="form-control" name="dokumen" id="dokumen" />
+                                <input type="file" class="form-control" name="dokumen" id="dokumen"/>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Status:</label>
@@ -61,13 +61,13 @@
                     <div>
                         <table class="table table-striped" id="myTable">
                             <thead>
-                                <tr>
-                                    <th>JUDUL REGULASI</th>
-                                    <th>NOMOR</th>
-                                    <th>TAHUN</th>
-                                    <th>JENIS</th>
-                                    <th>Aksi</th>
-                                </tr>
+                            <tr>
+                                <th>JUDUL REGULASI</th>
+                                <th>NOMOR</th>
+                                <th>TAHUN</th>
+                                <th>JENIS</th>
+                                <th>Aksi</th>
+                            </tr>
                             </thead>
                             <tbody>
 
@@ -84,15 +84,15 @@
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#myTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('regulasi.data') }}",
                 columns: [{
-                        data: 'judul',
-                        name: 'judul'
-                    },
+                    data: 'judul',
+                    name: 'judul'
+                },
                     {
                         data: 'nomor',
                         name: 'nomor'
@@ -113,7 +113,7 @@
                     },
                 ]
             });
-            var del = function(id) {
+            var del = function (id) {
                 Swal.fire({
                     title: 'Apakah anda yakin?',
                     text: "Data yang sudah terhapus tidak bisa dikembalikan lagi!",
@@ -127,7 +127,7 @@
                         $.ajax({
                             url: "{{ route('regulasi.index') }}/" + id,
                             method: "DELETE",
-                            success: function(response) {
+                            success: function (response) {
                                 table.ajax.reload();
                                 Swal.fire(
                                     'Terhapus!',
@@ -135,7 +135,7 @@
                                     'sukses'
                                 )
                             },
-                            failure: function(response) {
+                            failure: function (response) {
                                 swal(
                                     "Internal Error",
                                     "Oops, your note was not saved.", // had a missing comma
@@ -146,7 +146,7 @@
                     }
                 })
             };
-            $('body').on('click', '.hapus-data', function() {
+            $('body').on('click', '.hapus-data', function () {
                 del($(this).attr('data-id'));
             });
 

@@ -19,7 +19,7 @@
                     @endif
                     <div class="col-lg-6">
                         <form class="row" action="{{ route('news.store') }}" method="post"
-                            enctype="multipart/form-data">
+                              enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
@@ -36,11 +36,11 @@
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label">Upload Foto:</label>
-                                <input type="file" class="form-control" name="file" id="file" />
+                                <input type="file" class="form-control" name="file" id="file"/>
                             </div>
                             <div class="col-12 form-group">
                                 <label for="sel1">Status:</label>
-                                <select class="form-control" name="status" id="status"">
+                                <select class="form-control" name="status" id="status">
                                     <option><label>-- Pilih Salah Satu --</label></option>
                                     <option value="1">Draft</option>
                                     <option value="2">Publish</option>
@@ -66,13 +66,13 @@
                     <div>
                         <table class="table table-striped" id="myTable">
                             <thead>
-                                <tr>
-                                    <th>Judul</th>
-                                    <th>Kategori</th>
-                                    <th>Sumber</th>
-                                    <th>Editor</th>
-                                    <th>Aksi</th>
-                                </tr>
+                            <tr>
+                                <th>Judul</th>
+                                <th>Kategori</th>
+                                <th>Sumber</th>
+                                <th>Editor</th>
+                                <th>Aksi</th>
+                            </tr>
                             </thead>
                             <tbody>
 
@@ -89,15 +89,15 @@
     <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var table = $('#myTable').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('news.data') }}",
                 columns: [{
-                        data: 'judul',
-                        name: 'judul'
-                    },
+                    data: 'judul',
+                    name: 'judul'
+                },
                     {
                         data: 'kategori',
                         name: 'kategori'
@@ -118,7 +118,7 @@
                     },
                 ]
             });
-            var del = function(id) {
+            var del = function (id) {
                 Swal.fire({
                     title: 'Apakah anda yakin?',
                     text: "Data yang sudah terhapus tidak bisa dikembalikan lagi!",
@@ -132,7 +132,7 @@
                         $.ajax({
                             url: "{{ route('news.index') }}/" + id,
                             method: "DELETE",
-                            success: function(response) {
+                            success: function (response) {
                                 table.ajax.reload();
                                 Swal.fire(
                                     'Terhapus!',
@@ -140,7 +140,7 @@
                                     'sukses'
                                 )
                             },
-                            failure: function(response) {
+                            failure: function (response) {
                                 swal(
                                     "Internal Error",
                                     "Oops, your note was not saved.", // had a missing comma
@@ -151,7 +151,7 @@
                     }
                 })
             };
-            $('body').on('click', '.hapus-data', function() {
+            $('body').on('click', '.hapus-data', function () {
                 del($(this).attr('data-id'));
             });
 
