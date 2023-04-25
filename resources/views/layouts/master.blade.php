@@ -94,79 +94,19 @@
                             <li class="menu-item"><a class="menu-link" href="{{ url('/') }}">
                                     <div>Beranda</div>
                                 </a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">
-                                    <div>Profil</div>
-                                </a>
-                                <ul class="sub-menu-container" style="">
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ url('visi') }}">
-                                            <div>Visi dan Misi</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ url('regulasi') }}">
-                                            <div>Dasar Hukum</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ url('strukturorg') }}">
-                                            <div>Struktur Organisasi</div>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
-                                    <div>Layanan KORPRI</div>
-                                </a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">
-                                    <div>Kegiatan KORPRI</div>
-                                </a>
-                                <ul class="sub-menu-container" style="">
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',1)}}">
-                                            <div>KORPRI PEDULI</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',2)}}">
-                                            <div>HUT KORPRI</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',3)}}">
-                                            <div>MUSKAB KORPRI</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',4)}}">
-                                            <div>KORPRI RELIGI</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',5)}}">
-                                            <div>RAPAT KERJA</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',6)}}">
-                                            <div>KORPRI SINERGI</div>
-                                        </a>
-                                    </li>
-                                    <li class="menu-item" style="">
-                                        <a class="menu-link" href="{{ route('bansos.show',7)}}">
-                                            <div>LAIN-LAIN</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-item"><a class="menu-link" href="{{ route('gallery.index') }}">
-                                    <div>Galeri</div>
-                                </a></li>
                             <li class="menu-item"><a class="menu-link" href="{{ route('info.index') }}">
                                     <div>Pengumuman</div>
                                 </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
+                                    <div>Laporan APBDes</div>
+                                </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
+                                   <div>Galeri</div>
+                                </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
+                                    <div>Tentang Desa</div>
+                                </a></li>
+
                             @auth
                                 <li class="menu-item"><a class="menu-link" href="#">
                                         <div>Admin</div>
@@ -178,36 +118,23 @@
                                             </a>
                                         </li>
                                         <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ route('regulasi.create') }}">
-                                                <div>Form Dasar Hukum</div>
+                                            <a class="menu-link" href="{{ route('info.create') }}">
+                                                <div>Form Pengumuman</div>
                                             </a>
                                         </li>
                                         <li class="menu-item" style="">
                                             <a class="menu-link" href="{{ route('strukturorg.create') }}">
-                                                <div>Form Struktur Organisasi</div>
+                                                <div>Form Laporan APBDes</div>
                                             </a>
                                         </li>
-                                        <li class="menu-item"><a class="menu-link"
-                                                                 href="{{ route('services.create') }}">
-                                                <div>Form Jenis Layanan KORPRI</div>
-                                            </a></li>
-                                        <!-- <li class="menu-item"><a class="menu-link"
-                                                    href="{{ route('fotolayanan.create') }}">
-                                                    <div>Form Foto Layanan KORPRI</div>
-                                                </a></li> -->
-                                        <li class="menu-item"><a class="menu-link"
-                                                                 href="{{ route('bansos.create') }}">
-                                                <div>Form Kegiatan Korpri</div>
-                                            </a></li>
-                                        <li class="menu-item"><a class="menu-link"
-                                                                 href="{{ route('gallery.create') }}">
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('services.create') }}">
                                                 <div>Form Galeri</div>
                                             </a></li>
-                                        <li class="menu-item"><a class="menu-link"
-                                                                 href="{{ route('info.create') }}">
-                                                <div>Form Pengumuman</div>
-                                            </a>
-                                        </li>
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ route('bansos.create') }}">
+                                                <div>Form Tentang Desa</div>
+                                            </a></li>
                                         @auth
                                             <li class="menu-item"><a class="menu-link" href="{{ route('logout') }}"
                                                                      onclick="event.preventDefault();

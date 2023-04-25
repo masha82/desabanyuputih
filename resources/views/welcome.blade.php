@@ -22,16 +22,15 @@
                                   data-animate-in="fadeInUp">
                                 <div class="fw-bold" style="color:#1a9256">DESA BANYUPUTIH</div>
                                 {{-- <div class="fw-bold" style="color:#AA9B4E">BANYUPUTIH</div> --}}
-                                <div class="fw-bold" style="color:#6572ec">KABUPATENN</div>
+                                <div class="fw-bold" style="color:#6572ec">KABUPATEN</div>
                                 <div class="fw-bold" style="color:#6572ec">SITUBONDO</div>
                             </span>
                         </h1>
                     </div>
 
                     <div class="mx-auto" style="max-width: 600px">
-                        <p class="lead fw-normal text-dark mb-0">Korps Pegawai Republik Indonesia atau biasa dikenal
-                            KORPRI
-                            berdiri berdasarkan Keputusan Presiden Nomor 82 Tahun 1971, 29 November 1971. </p>
+                        <p class="lead fw-normal text-dark mb-0">Desa Banyuputih adalah salah satu desa di Kecamatan Banyuputih, Situbondo, 
+                            Jawa Timur, Indonesia </p>
                     </div>
                 </div>
             </div>
