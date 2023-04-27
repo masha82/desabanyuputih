@@ -11,14 +11,18 @@
 @section('content')
 	<section class="slider-two">
 		<div class="single-item-carousel owl-carousel owl-theme">
-			
+			@php
+              use App\Models\FotoHeader;
+              $header = FotoHeader::orderBy('created_at', 'DESC')->get();   
+            @endphp
 			<!-- Slide -->
 			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(images/main-slider/2.jpg)"></div>
-				<div class="slider-two_pattern-layer" style="background-image:url(images/main-slider/pattern-1.png)"></div>
+                @foreach ($header as $item)
+				<div class="slider-two_image-layer" style="background-image:url({{ asset('fotoheader/' . $item->foto) }})" 
+                    style="position: absolute; left: 0%; top: 0px;"></div>
 				<div class="auto-container">
-					
-					<!-- Content Column -->
+				@endforeach	
+					{{-- <!-- Content Column -->
 					<div class="slider-two-content">
 						<div class="slider-two_inner">
 							<div class="slider-two_title">We are Business Solution</div>
@@ -34,65 +38,9 @@
 								</a>
 							</div>
 						</div>
-					</div>
-					
+					</div> --}}
 				</div>
 			</div>
-			
-			<!-- Slide -->
-			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(images/main-slider/2.jpg)"></div>
-				<div class="slider-two_pattern-layer" style="background-image:url(images/main-slider/pattern-1.png)"></div>
-				<div class="auto-container">
-					
-					<!-- Content Column -->
-					<div class="slider-two-content">
-						<div class="slider-two_inner">
-							<div class="slider-two_title">We are Business Solution</div>
-							<h1 class="slider-two_heading">Prosper in this volatile <br> market funding.</h1>
-							<div class="slider-two_text">We place you at the centre of international networks to <br> advance your strategic interests</div>
-							<!-- Button Box -->
-							<div class="slider-two_button-box">
-								<a class="btn-style-two theme-btn btn-item" href="#">
-									<div class="btn-wrap">
-										<span class="text-one">Our Team <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-										<span class="text-two">Our Team <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-			<!-- Slide -->
-			<div class="slide">
-				<div class="slider-two_image-layer" style="background-image:url(images/main-slider/2.jpg)"></div>
-				<div class="slider-two_pattern-layer" style="background-image:url(images/main-slider/pattern-1.png)"></div>
-				<div class="auto-container">
-					
-					<!-- Content Column -->
-					<div class="slider-two-content">
-						<div class="slider-two_inner">
-							<div class="slider-two_title">We are Business Solution</div>
-							<h1 class="slider-two_heading">Prosper in this volatile <br> market funding.</h1>
-							<div class="slider-two_text">We place you at the centre of international networks to <br> advance your strategic interests</div>
-							<!-- Button Box -->
-							<div class="slider-two_button-box">
-								<a class="btn-style-two theme-btn btn-item" href="#">
-									<div class="btn-wrap">
-										<span class="text-one">Our Team <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-										<span class="text-two">Our Team <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
 		</div>
 	</section>
 	<!-- End Main Slider -->

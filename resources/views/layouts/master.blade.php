@@ -83,7 +83,7 @@
                                         <li></li>
                                         <li></li>
 										<li class="menu-item">
-                                            <a href="#">Beranda</a>
+                                            <a href="{{ url('/') }}">Beranda</a>
 										</li>
                                         <li></li>
                                         <li class="menu-item">
@@ -91,22 +91,22 @@
 										</li>
                                         <li></li>
                                         <li class="menu-item">
-                                            <a href="#">Laporan APBDes</a>
+                                            <a href="{{ url('report') }}">Laporan APBDes</a>
 										</li>
                                         <li></li>
                                         <li class="menu-item">
-                                            <a href="#">Galeri</a>
+                                            <a href="{{ url('gallery') }}">Galeri</a>
 										</li>
                                         <li></li>
                                         <li class="menu-item">
-                                            <a href="#">Tentang Desa</a>
+                                            <a href="{{ url('about') }}">Tentang Desa</a>
 										</li>
 										<li class="dropdown current"><a href="#">Administrator</a>
 											<ul>
 												<li><a href="{{ route('awal.create')}}">Form Foto Header</a></li>
 												<li><a href="#">Form Berita</a></li>
 												<li><a href="#">Form Pengumuman</a></li>
-												<li><a href="#">Form Laporan APBDes</a></li>
+												<li><a href="{{ route('report.create')}}">Form Laporan APBDes</a></li>
 												<li><a href="#">Form Galeri</a></li>
 												<li><a href="#">Form Tentang Desa</a></li>
 											</ul>
@@ -317,8 +317,12 @@
 <script src="{{ asset('assets/tampilan-new/js/bootstrap.min.js')}}"></script>
 <script src="{{ asset('assets/tampilan-new/js/tilt.jquery.min.js')}}"></script>
 <script src="{{ asset('assets/tampilan-new/js/magnific-popup.min.js')}}"></script>
-
 <script src="{{ asset('assets/tampilan-new/js/script.js')}}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
 <script>
     $.ajaxSetup({
         headers: {
