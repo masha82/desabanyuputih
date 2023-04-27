@@ -1,269 +1,324 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-
+<html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="author" content="SemiColonWeb"/>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Stylesheets
-    ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('assets/style.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/dark.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/font-icons.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" type="text/css"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}" type="text/css"/>
+<meta charset="utf-8">
+<title>Website Desa Banyuputih</title>
+<!-- Stylesheets -->
+<link href="{{ asset('assets/tampilan-new/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/tampilan-new/css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/tampilan-new/css/responsive.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" type="text/css"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Freelancer Demo Specific Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('assets/demos/freelancer/css/fonts.css') }}" type="text/css"/>
-    {{-- <link rel="stylesheet" href="{{ asset('assets/demos/freelancer/freelancer.css') }}" type="text/css" /> --}}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="{{ asset('assets/tampilan-new/images/favicon.png') }}" type="image/x-icon">
+<link rel="icon" href="{{ asset('assets/tampilan-new/images/favicon.png') }}" type="image/x-icon">
 
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css//colors.php?color=f7c25e') }}" type="text/css" /> --}}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
-    @stack('css')
-    @yield('title')
-    <style>
-        .testimonial.testimonial-full .flex-control-nav {
-            margin-top: 0px;
-        }
-    </style>
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 </head>
 
-<body class="stretched">
-
-<!-- Document Wrapper
-============================================= -->
-<div id="wrapper" class="clearfix">
-    <div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false"
-         style="padding:0px!important">
-        <div class="flexslider" style="height: 221px;">
-            <div class="slider-wrap">
-                <div class="slide" data-thumb-alt=""
-                     style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
-
-                    <div class="testi-content">
-                        <img src="{{ asset('topbar-new.jpg') }}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header
-============================================= -->
-    <header id="header" class="border-bottom-0 no-sticky transparent-header" data-sticky-shrink="false">
-        <div id="header-wrap">
-            <div class="container">
-                <div class="header-row flex-row-reverse flex-lg-row justify-content-between">
-                    <!-- Logo
-                ============================================= -->
-                    <div id="logo">
-                        <!-- <a href="demo-freelancer.html" class="standard-logo"><img
-                                    src="{{ asset('logo_situbondo.png') }}"
-                                    style="height: 60px!important;max-height:60px!important" alt="Canvas Logo" ></a> -->
-                        <a href="demo-freelancer.html" class="retina-logo"><img
-                                class="d-flex align-content-center justify-content-center"
-                                src="{{ asset('logo_situbondo.png') }}" alt="Canvas Logo"></a>
-                    </div><!-- #logo end -->
-
-
-                    <div id="primary-menu-trigger">
-                        <svg class="svg-trigger" viewBox="0 0 100 100">
-                            <path
-                                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
-                            </path>
-                            <path d="m 30,50 h 40"></path>
-                            <path
-                                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
-                            </path>
-                        </svg>
-                    </div>
-
-                    <!-- Primary Navigation
-                ============================================= -->
-                    <nav class="primary-menu with-arrows">
-
-                        <ul class="menu-container justify-content-between">
-                            <li class="menu-item"><a class="menu-link" href="{{ url('/') }}">
-                                    <div>Beranda</div>
-                                </a></li>
-                            <li class="menu-item"><a class="menu-link" href="{{ route('info.index') }}">
-                                    <div>Pengumuman</div>
-                                </a></li>
-                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
-                                    <div>Laporan APBDes</div>
-                                </a></li>
-                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
-                                   <div>Galeri</div>
-                                </a></li>
-                            <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
-                                    <div>Tentang Desa</div>
-                                </a></li>
-
-                            @auth
-                                <li class="menu-item"><a class="menu-link" href="#">
-                                        <div>Admin</div>
-                                    </a>
-                                    <ul class="sub-menu-container" style="">
-                                        <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ route('news.create') }}">
-                                                <div>Form Berita</div>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ route('info.create') }}">
-                                                <div>Form Pengumuman</div>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ route('strukturorg.create') }}">
-                                                <div>Form Laporan APBDes</div>
-                                            </a>
-                                        </li>
+<body>
+ 
+<div class="page-wrapper">
+	
+    <!-- Preloader -->
+    <div class="preloader"></div>
+	<!-- End Preloader -->
+ 	
+ 	<!-- Main Header / Header Style Two -->
+    <header class="main-header header-style-two">
+    	
+		<!-- Header Top -->
+		<div class="header-top_two">
+			<div class="auto-container">
+				<div class="d-flex justify-content-center align-items-center flex-wrap">
+					
+					<!-- Info List -->
+					<ul class="info-list">
+						<li><a href="#"><span class="icon fa-solid fa-phone fa-fw"></span>+628xxxxxxxxx</a></li>
+						<li><a href="#"><span class="icon fa-solid fa-envelope fa-fw"></span>desabanyuputih58@gmail.com</a></li>
+						<li><a href="#"><span class="icon fa-solid fa-map fa-fw"></span>Kecamatan Banyuputih, Kabupaten Situbondo, Jawa Timur</a></li>
+					</ul>
+					
+					<!-- Social Box -->
+					<ul class="header-social_box">
+						<li><a href="https://www.facebook.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
+						<li><a href="https://www.twitter.com/" class="fa-brands fa-twitter fa-fw"></a></li>
+						<li><a href="https://www.linkedin.com/" class="fa-brands fa-linkedin fa-fw"></a></li>
+						<li><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		<!-- End Header Top -->
+		
+		<!-- Header Upper -->
+        <div class="header-upper">
+            <div class="auto-container">
+				<div class="inner-container d-flex">
+					<!-- Logo Box -->
+					<div class="logo"><a href="index.html"><img src="{{ asset('assets/tampilan-new/images/Lambang_Kabupaten_Situbondo.png')}}" style="height:85px" alt="" title=""></a></div>
+					
+					<!-- Upper Right -->
+					<div class="upper-right">
+						<div class="nav-outer d-flex justify-content-between align-items-center flex-wrap">
+						
+							<!-- Main Menu -->
+							<nav class="main-menu show navbar-expand-md">
+								<div class="navbar-header">
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								
+								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+									<ul class="navigation clearfix">
+                                        <li></li>
+                                        <li></li>
+										<li class="menu-item">
+                                            <a href="#">Beranda</a>
+										</li>
+                                        <li></li>
                                         <li class="menu-item">
-                                            <a class="menu-link" href="{{ route('services.create') }}">
-                                                <div>Form Galeri</div>
-                                            </a></li>
+                                            <a href="{{ url('info') }}">Pengumuman</a>
+										</li>
+                                        <li></li>
                                         <li class="menu-item">
-                                            <a class="menu-link" href="{{ route('bansos.create') }}">
-                                                <div>Form Tentang Desa</div>
-                                            </a></li>
-                                        @auth
-                                            <li class="menu-item"><a class="menu-link" href="{{ route('logout') }}"
-                                                                     onclick="event.preventDefault();
-                                                          document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
+                                            <a href="#">Laporan APBDes</a>
+										</li>
+                                        <li></li>
+                                        <li class="menu-item">
+                                            <a href="#">Galeri</a>
+										</li>
+                                        <li></li>
+                                        <li class="menu-item">
+                                            <a href="#">Tentang Desa</a>
+										</li>
+										<li class="dropdown current"><a href="#">Administrator</a>
+											<ul>
+												<li><a href="{{ route('awal.create')}}">Form Foto Header</a></li>
+												<li><a href="#">Form Berita</a></li>
+												<li><a href="#">Form Pengumuman</a></li>
+												<li><a href="#">Form Laporan APBDes</a></li>
+												<li><a href="#">Form Galeri</a></li>
+												<li><a href="#">Form Tentang Desa</a></li>
+											</ul>
+										</li>
+										{{-- <li class="dropdown"><a href="#">Project</a>
+											<ul>
+												<li><a href="project.html">project</a></li>
+												<li><a href="project-detail.html">project Detail</a></li>
+											</ul>
+										</li> --}}
+									</ul>
+								</div>
+							</nav>
+							<!-- Main Menu End-->
+							
+							<div class="outer-box d-flex align-items-center">
+								
+								<!-- Search Box -->
+								<div class="search-box">
+									<form method="post" action="contact.html">
+										<div class="form-group">
+											<input type="search" name="search-field" value="" placeholder="Search..." required>
+											<button type="submit"><span class="icon fa fa-search"></span></button>
+										</div>
+									</form>
+								</div>
+								
+								<!-- Mobile Navigation Toggler -->
+								<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                                      class="d-none">
-                                                    @csrf
-                                                </form>
-                                            </li>
-                                        @endauth
-                                    </ul>
-                                </li>
-                        @endauth
-                    </nav><!-- #primary-menu end -->
-
-                </div>
+        <!-- Sticky Header  -->
+        <div class="sticky-header">
+            <div class="auto-container">
+				<div class="d-flex justify-content-between align-items-center">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="index.html" title=""><img src="images/logo-3.png" alt="" title=""></a>
+					</div>
+					
+					<!-- Right Col -->
+					<div class="right-box d-flex align-items-center flex-wrap">
+						<!-- Main Menu -->
+						<nav class="main-menu">
+							<!--Keep This Empty / Menu will come through Javascript-->
+						</nav>
+						<!-- Main Menu End-->
+						
+						<div class="outer-box d-flex align-items-center">
+								
+							<!-- Search Box -->
+							<div class="search-box">
+								<form method="post" action="contact.html">
+									<div class="form-group">
+										<input type="search" name="search-field" value="" placeholder="Search..." required>
+										<button type="submit"><span class="icon fa fa-search"></span></button>
+									</div>
+								</form>
+							</div>
+							
+							<!-- Mobile Navigation Toggler -->
+							<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
             </div>
         </div>
-    </header><!-- #header end -->
-
-    <!-- Slider
-============================================= -->
-
-    <!-- Content
-============================================= -->
-    <section id="content">
-
-        <div class="content-wrap p-0 mb-4">
-            @yield('content')
+		<!-- End Sticky Menu -->
+        
+		<!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-020-x-mark"></span></div>
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+				<!-- Search -->
+				<div class="search-box">
+					<form method="post" action="contact.html">
+						<div class="form-group">
+							<input type="search" name="search-field" value="" placeholder="SEARCH HERE" required>
+							<button type="submit"><span class="icon flaticon-001-loupe"></span></button>
+						</div>
+					</form>
+				</div>
+                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            </nav>
         </div>
-    </section>
+		<!-- End Mobile Menu -->
+	
+    </header>
+    <!-- End Main Header -->
+	
+	
 
-    <!-- Footer
+	<!-- Content
 ============================================= -->
-    <footer id="footer" class="dark">
-        <!-- Copyrights
-============================================= -->
-        <div id="copyrights">
-            <div class="container">
+<section id="content">
+	<div class="content-wrap p-0 mb-4">
+		@yield('content')
+	</div>
+</section>
 
-                <div class="row col-mb-30">
+	<!-- Footer -->
+	<footer class="main-footer" style="background-image:url(images/background/pattern-11.png)">
+		<div class="auto-container">
+			<!-- Widgets Section -->
+			<div class="widgets-section">
+				<div class="row clearfix">
+					
+					<!-- Big Column -->
+					<div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+							
+							<!-- Footer Column -->
+							<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget logo-widget">
+									<div class="logo">
+										<a href="index.html"><img src="{{ asset('assets/tampilan-new/images/footer-logo.png')}}" alt="" /></a>
+									</div>
+									<div class="text">We work with a passion of taking challenges and creating new ones in advertising sector.</div>
+									<a href="#" class="theme-btn about-btn">About us</a>
+								</div>
+							</div>
+							
 
-                    <div class="col-md-6 text-center text-md-start">
-                        Copyrights &copy; 2023<br>
-                        Dinas Komunikasi dan Informatika Kabupaten Situbondo<br>
+					<!-- Big Column -->
+					<div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+							
+							<!-- Footer Column -->
+							<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget contact-widget">
+									<h4>Official info:</h4>
+									<ul class="contact-list">
+										<li><span class="icon fa fa-phone"></span> 30 Commercial Road <br> Fratton, Australia</li>
+										<li><span class="icon fa fa-envelope"></span> 1-888-452-1505</li>
+									</ul>
+									<div class="timing">
+										<strong>Open Hours: </strong>
+										Mon - Sat: 8 am - 5 pm, <br> Sunday: CLOSED
+									</div>
+								</div>
+							</div>
+							
+							<!-- Footer Column -->
+							<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+								<div class="footer-widget instagram-widget">
+									<h4>Gallery</h4>
+									<div class="widget-content">
+										<div class="images-outer clearfix">
+											<!--Image Box-->
+											<figure class="image-box"><a class="lightbox-image" href="images/gallery/project-1.jpg"><img src="images/gallery/footer-gallery-thumb-1.jpg" alt=""></a></figure>
+											<!--Image Box-->
+											<figure class="image-box"><a class="lightbox-image" href="images/gallery/project-2.jpg"><img src="images/gallery/footer-gallery-thumb-2.jpg" alt=""></a></figure>
+											<!--Image Box-->
+											<figure class="image-box"><a class="lightbox-image" href="images/gallery/project-3.jpg"><img src="images/gallery/footer-gallery-thumb-3.jpg" alt=""></a></figure>
+											<!--Image Box-->
+											<figure class="image-box"><a class="lightbox-image" href="images/gallery/project-4.jpg"><img src="images/gallery/footer-gallery-thumb-4.jpg" alt=""></a></figure>
+											<!--Image Box-->
+											<figure class="image-box"><a class="lightbox-image" href="images/gallery/project-5.jpg"><img src="images/gallery/footer-gallery-thumb-5.jpg" alt=""></a></figure>
+											<!--Image Box-->
+											<figure class="image-box"><a class="lightbox-image" href="images/gallery/project-6.jpg"><img src="images/gallery/footer-gallery-thumb-6.jpg" alt=""></a></figure>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<div class="copyright">2023 &copy; All rights reserved by <a href="#">Themexriver</a></div>
+			</div>
+			
+		</div>
+	</footer>
+	<!-- Footer -->
+		
+</div>
+<!-- End PageWrapper -->
 
-                    </div>
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
 
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="d-flex justify-content-center justify-content-md-end">
-                            <a href="#" class="social-icon si-small si-borderless si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                            </a>
+<script src="{{ asset('assets/tampilan-new/js/jquery.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/appear.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/owl.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/wow.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/odometer.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/mixitup.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/popper.min.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/parallax-scroll.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/parallax.min.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/tilt.jquery.min.js')}}"></script>
+<script src="{{ asset('assets/tampilan-new/js/magnific-popup.min.js')}}"></script>
 
-                            <a href="#" class="social-icon si-small si-borderless si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-pinterest">
-                                <i class="icon-pinterest"></i>
-                                <i class="icon-pinterest"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-vimeo">
-                                <i class="icon-vimeo"></i>
-                                <i class="icon-vimeo"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-github">
-                                <i class="icon-github"></i>
-                                <i class="icon-github"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-yahoo">
-                                <i class="icon-yahoo"></i>
-                                <i class="icon-yahoo"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
-                                <i class="icon-linkedin"></i>
-                                <i class="icon-linkedin"></i>
-                            </a>
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <i class="icon-envelope2"></i> korpri@gmail.com <br>
-                        <span class="middot"></span>
-                        <i class="icon-headphones"></i> +62 811-1111-111 <br>
-                        <span class="middot"></span> <i class="icon-office"></i> Jalan PB. Sudirman, Situbondo
-                    </div>
-
-                </div>
-
-            </div>
-        </div><!-- #copyrights end -->
-    </footer><!-- #footer end -->
-</div><!-- #wrapper end -->
-</body>
-<!-- Go To Top
-============================================= -->
-<div id="gotoTop" class="icon-double-angle-up bg-white text-dark rounded-circle shadow"></div>
-
-<!-- External JavaScripts
-============================================= -->
-<script src="{{ asset('assets/js/jquery.js') }}"></script>
-<script src="{{ asset('assets/js/plugins.min.js') }}"></script>
-
-<!-- Footer Scripts
-============================================= -->
-<script src="{{ asset('assets/js/functions.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-<script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+<script src="{{ asset('assets/tampilan-new/js/script.js')}}"></script>
 <script>
     $.ajaxSetup({
         headers: {
@@ -272,3 +327,8 @@
     });
 </script>
 @stack('js')
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+</body>
+</html>
