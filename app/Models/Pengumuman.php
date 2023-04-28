@@ -13,5 +13,5 @@ class Pengumuman extends Model
      *
      * @var array
      */
-    protected $fillable = ['judul', 'kategori', 'isi', 'thumbnail', 'file', 'status', 'sumber'];
+    protected $fillable = ['judul', 'kategori', 'isi', 'thumbnail', 'file', 'sumber'];
 }

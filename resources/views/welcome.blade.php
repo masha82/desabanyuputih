@@ -20,8 +20,9 @@
                 @foreach ($header as $item)
 				<div class="slider-two_image-layer" style="background-image:url({{ asset('fotoheader/' . $item->foto) }})" 
                     style="position: absolute; left: 0%; top: 0px;"></div>
-				<div class="auto-container">
-				@endforeach	
+                @endforeach	
+                    <div class="auto-container">
+				
 					{{-- <!-- Content Column -->
 					<div class="slider-two-content">
 						<div class="slider-two_inner">
@@ -44,7 +45,7 @@
 		</div>
 	</section>
 	<!-- End Main Slider -->
-
+    <div class="section">
     <div class="container">
         <div class="row border-between">
             @if (!empty($berita->first()->file))
@@ -100,6 +101,7 @@
                         </article>
                     @endforeach
                 </div>
+            </div>
 
             </div>
             <a href="{{ route('news.index') }}" class="btn btn-sm btn-outline-secondary">Berita lainnya <i

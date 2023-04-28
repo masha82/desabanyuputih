@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="row posts-md col-mb-30">
-        <div class="case-block grid-container grid-4 has-init-isotope" data-big="3" data-lightbox="gallery"
+        <div class="masonry-thumbs grid-container grid-4 has-init-isotope" data-big="3" data-lightbox="gallery"
              style="position: relative; height: 295.664px;">
             @foreach ($laporan as $item)
                 <a class="grid-item" href="{{ asset('foto_laporan/' . $item->file) }}" data-lightbox="gallery-item"

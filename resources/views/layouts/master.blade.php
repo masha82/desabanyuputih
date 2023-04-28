@@ -2,17 +2,21 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <title>Website Desa Banyuputih</title>
 <!-- Stylesheets -->
 <link href="{{ asset('assets/tampilan-new/css/bootstrap.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/tampilan-new/css/style.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/tampilan-new/css/responsive.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 
 <link rel="shortcut icon" href="{{ asset('assets/tampilan-new/images/favicon.png') }}" type="image/x-icon">
 <link rel="icon" href="{{ asset('assets/tampilan-new/images/favicon.png') }}" type="image/x-icon">
@@ -41,16 +45,14 @@
 					
 					<!-- Info List -->
 					<ul class="info-list">
-						<li><a href="#"><span class="icon fa-solid fa-phone fa-fw"></span>+628xxxxxxxxx</a></li>
+						<li><a href="#"><span class="icon fa-solid fa-phone fa-fw"></span>+6282240606788</a></li>
 						<li><a href="#"><span class="icon fa-solid fa-envelope fa-fw"></span>desabanyuputih58@gmail.com</a></li>
 						<li><a href="#"><span class="icon fa-solid fa-map fa-fw"></span>Kecamatan Banyuputih, Kabupaten Situbondo, Jawa Timur</a></li>
 					</ul>
 					
 					<!-- Social Box -->
 					<ul class="header-social_box">
-						<li><a href="https://www.facebook.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
-						<li><a href="https://www.twitter.com/" class="fa-brands fa-twitter fa-fw"></a></li>
-						<li><a href="https://www.linkedin.com/" class="fa-brands fa-linkedin fa-fw"></a></li>
+						<li><a href="https://www.facebook.com/Banyuputihdesaku/" class="fa-brands fa-facebook-f fa-fw"></a></li>
 						<li><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li>
 					</ul>
 					
@@ -64,7 +66,8 @@
             <div class="auto-container">
 				<div class="inner-container d-flex">
 					<!-- Logo Box -->
-					<div class="logo"><a href="index.html"><img src="{{ asset('assets/tampilan-new/images/Lambang_Kabupaten_Situbondo.png')}}" style="height:85px" alt="" title=""></a></div>
+					<div class="logo"><a href="index.html"><img src="{{ asset('assets/tampilan-new/images/Lambang_Kabupaten_Situbondo.png')}}" style="height:85px" alt="" title="">
+					</a></div>
 					
 					<!-- Upper Right -->
 					<div class="upper-right">
@@ -80,7 +83,7 @@
 								
 								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 									<ul class="navigation clearfix">
-                                        <li></li>
+										@guest
                                         <li></li>
 										<li class="menu-item">
                                             <a href="{{ url('/') }}">Beranda</a>
@@ -101,16 +104,31 @@
                                         <li class="menu-item">
                                             <a href="{{ url('about') }}">Tentang Desa</a>
 										</li>
+										@endguest
+										
 										<li class="dropdown current"><a href="#">Administrator</a>
 											<ul>
 												<li><a href="{{ route('awal.create')}}">Form Foto Header</a></li>
-												<li><a href="#">Form Berita</a></li>
-												<li><a href="#">Form Pengumuman</a></li>
+												<li><a href="{{ route('news.create')}}">Form Berita</a></li>
+												<li><a href="{{ route('info.create')}}">Form Pengumuman</a></li>
 												<li><a href="{{ route('report.create')}}">Form Laporan APBDes</a></li>
-												<li><a href="#">Form Galeri</a></li>
-												<li><a href="#">Form Tentang Desa</a></li>
+												<li><a href="{{ route('gallery.create')}}">Form Galeri</a></li>
+												<li><a href="{{ route('about.create')}}">Form Tentang Desa</a></li>
 											</ul>
 										</li>
+										<li class="menu-item" style="">
+											<a class="dropdown-item text-danger" href="{{ route('logout') }}"
+											   onclick="event.preventDefault();
+														 document.getElementById('logout-form').submit();">
+												{{ __('Logout') }}
+											</a>
+		
+											<form id="logout-form" action="{{ route('logout') }}" method="POST"
+												  class="d-none">
+												@csrf
+											</form>
+										</li>
+										
 										{{-- <li class="dropdown"><a href="#">Project</a>
 											<ul>
 												<li><a href="project.html">project</a></li>

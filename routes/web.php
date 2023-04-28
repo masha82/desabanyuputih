@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', \App\Http\Controllers\BerandaController::class);
 
-Route::get('/visi', function () {
-    return view('visi');
-});
+Auth::routes([
+    'register' => false, // Registration Routes...
+]);
 
 Auth::routes(['register' => false]);
 // tabel
