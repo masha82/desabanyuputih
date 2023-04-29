@@ -7,8 +7,7 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">INFORMASI/PENGUMUMAN TERKAIT KORPRI
-                        KABUPATEN SITUBONDO</h2>
+                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">Informasi/Pengumuman Terkait Desa Banyuputih</h2>
                 </div>
             </div>
         </div>
@@ -31,9 +30,9 @@
                                     </div>
                                     <div class="entry-meta">
                                         <ul>
-                                            <li><i class="icon-calendar3"></i>
+                                            {{-- <li><i class="icon-calendar3"></i>
                                                 {{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y') }}
-                                            </li>
+                                            </li> --}}
                                             <li><i class="icon-user"></i> {{ $item->sumber }}</li>
                                             <li><i class="icon-folder-open"></i> <a
                                                     href="#">{{ $item->kategori }}</a>

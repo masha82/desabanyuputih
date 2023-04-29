@@ -66,7 +66,7 @@
             <div class="auto-container">
 				<div class="inner-container d-flex">
 					<!-- Logo Box -->
-					<div class="logo"><a href="index.html"><img src="{{ asset('assets/tampilan-new/images/Lambang_Kabupaten_Situbondo.png')}}" style="height:85px" alt="" title="">
+					<div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('assets/tampilan-new/images/Lambang_Kabupaten_Situbondo.png')}}" style="height:85px" alt="" title="">
 					</a></div>
 					
 					<!-- Upper Right -->
@@ -105,7 +105,10 @@
                                             <a href="{{ url('about') }}">Tentang Desa</a>
 										</li>
 										@endguest
-										
+										@auth
+										<li class="menu-item">
+                                            <a href="{{ url('/') }}">Beranda</a>
+										</li>
 										<li class="dropdown current"><a href="#">Administrator</a>
 											<ul>
 												<li><a href="{{ route('awal.create')}}">Form Foto Header</a></li>
@@ -127,8 +130,8 @@
 												  class="d-none">
 												@csrf
 											</form>
-										</li>
-										
+										</li>										
+										@endauth
 										{{-- <li class="dropdown"><a href="#">Project</a>
 											<ul>
 												<li><a href="project.html">project</a></li>
@@ -238,7 +241,7 @@
 	</div>
 </section>
 
-	<!-- Footer -->
+	{{-- <!-- Footer -->
 	<footer class="main-footer" style="background-image:url(images/background/pattern-11.png)">
 		<div class="auto-container">
 			<!-- Widgets Section -->
@@ -315,7 +318,7 @@
 			
 		</div>
 	</footer>
-	<!-- Footer -->
+	<!-- Footer --> --}}
 		
 </div>
 <!-- End PageWrapper -->

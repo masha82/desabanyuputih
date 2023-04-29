@@ -7,7 +7,10 @@
     <title>Form Pengumuman</title>
 @endsection
 @section('content')
-    <section id="content">
+<section id="page-title">
+    <h3 class="text-center">Form Tambah Pengumuman</h3>
+</section>    
+<section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
                 <div class="row">
@@ -42,14 +45,6 @@
                                 <input type="file" class="form-control" name="file" id="file"/>
                             </div>
                             <div class="col-12 form-group">
-                                <label for="sel1">Status:</label>
-                                <select class="form-control" name="status" id="status">
-                                    <option><label>-- Pilih Salah Satu --</label></option>
-                                    <option value="1">Draft</option>
-                                    <option value="2">Publish</option>
-                                </select>
-                            </div>
-                            <div class="col-12 form-group">
                                 <label>Sumber:</label>
                                 <input type="text" name="sumber" id="sumber" class="form-control">
                             </div>
@@ -68,6 +63,7 @@
                             <tr>
                                 <th>Judul</th>
                                 <th>Kategori</th>
+                                <th>Isi</th>
                                 <th>Sumber</th>
                                 <th>Aksi</th>
                             </tr>
@@ -98,7 +94,11 @@
                 }, {
                     data: 'kategori',
                     name: 'kategori'
-                }, {
+                },{
+                    data: 'isi',
+                    name: 'isi'
+                }, 
+                {
                     data: 'sumber',
                     name: 'sumber'
                 },

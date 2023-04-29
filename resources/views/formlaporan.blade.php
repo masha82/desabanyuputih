@@ -4,11 +4,11 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
 @endpush
 @section('title')
-    <title>Form Foto Header</title>
+    <title>Form Laporan APBDes</title>
 @endsection
 @section('content')
     <section id="page-title">
-        <h3 class="text-center">Form Tambah Laporan APBDes</h3>
+        <h3 class="text-center">Form Tambah Laporan APBDes Banyuputih</h3>
     </section>
     <section id="content">
         <div class="content-wrap">

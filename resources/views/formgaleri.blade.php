@@ -7,7 +7,10 @@
     <title>Form Galeri Foto</title>
 @endsection
 @section('content')
-    <section id="content">
+<section id="page-title">
+    <h3 class="text-center">Form Tambah Galeri Foto</h3>
+</section>    
+<section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
                 <div class="row">

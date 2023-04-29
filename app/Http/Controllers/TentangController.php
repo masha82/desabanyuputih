@@ -16,9 +16,10 @@ class TentangController extends Controller
      */
     use Table;
     protected $model = TentangDesa::class;
+    protected $route = 'about';
      public function index()
     {
-        $aboutdesa = TentangDesa::orderBy('created_at', 'DESC')->get();
+        $aboutdesa = TentangDesa::orderBy('created_at', 'DESC')->first();
         return view('tentangdesa', compact('aboutdesa'));
     }
 

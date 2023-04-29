@@ -7,8 +7,7 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">GALERI KEGIATAN KORPRI KABUPATEN
-                        SITUBONDO</h2>
+                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">Galeri Foto Tentang Pemerintah Desa Banyuputih</h2>
                 </div>
             </div>
         </div>

@@ -1,13 +1,13 @@
 @extends('layouts.master')
 @section('title')
-    <title>Laporan APBDes</title>
+    <title>LAPORAN APBDes</title>
 @endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
-                    <h2 class="text-center">LAPORAN APBDes BANYUPUTIH</h2>
+                    <h2 class="text-center">Laporan APBDes Banyuputih</h2>
                 </div>
             </div>
         </div>

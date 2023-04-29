@@ -8,7 +8,7 @@
 @endsection
 @section('content')
     <section id="page-title">
-        <h3 class="text-center">Form Tambah Header</h3>
+        <h3 class="text-center">Form Tambah Header Foto</h3>
     </section>
     <section id="content">
         <div class="content-wrap">

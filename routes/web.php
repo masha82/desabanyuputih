@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', \App\Http\Controllers\BerandaController::class);
 
-Auth::routes([
-    'register' => false, // Registration Routes...
-]);
-
 Auth::routes(['register' => false]);
 // tabel
 Route::get('/news/data', [App\Http\Controllers\BeritaController::class, 'anyData'])->name('news.data');

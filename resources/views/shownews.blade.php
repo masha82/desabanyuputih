@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    <title>BERTA - {{ $data->judul }}</title>
+    <title>BERITA - {{ $data->judul }}</title>
 @endsection
 @section('content')
     <div class="container clearfix">
