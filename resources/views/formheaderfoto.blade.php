@@ -26,7 +26,7 @@
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Upload Foto:</label>
-                                <input type="file" class="form-control" name="foto" id="foto"/>
+                                <input type="file" class="form-control" name="foto" id="foto" required>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>

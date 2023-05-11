@@ -9,11 +9,11 @@
 @endsection
 
 @section('content')
-	<section class="slider-two">
+	<section class="slider-two mb-4">
 		<div class="single-item-carousel owl-carousel owl-theme">
 			@php
               use App\Models\FotoHeader;
-              $header = FotoHeader::orderBy('created_at', 'DESC')->get();   
+              $header = FotoHeader::orderBy('created_at', 'ASC')->get();   
             @endphp
 			<!-- Slide -->
 			<div class="slide">
@@ -52,7 +52,7 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <article class="entry border-bottom-0 mb-0">
                         <div class="entry-image">
-                            <a href="demo-blog-single.html"><img src="{{ asset('gambar/' . $berita->first()->file) }}"
+                            <a href="#"><img src="{{ asset('gambar/' . $berita->first()->file) }}"
                                                                  alt="Image 3"></a>
                         </div>
                         <div class="entry-title">
@@ -85,9 +85,9 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="entry-title title-xs">
-                                        {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div> --}}
-                                        <h3><a href="{{route('news.show', $item->id)}}"
-                                               class="stretched-link color-underline">{{ $item->judul }}</a></h3>
+                                        {{-- <div class="entry-categories"><a href="#">Market</a></div> --}}
+                                        <h6><a href="{{route('news.show', $item->id)}}"
+                                               class="stretched-link color-underline">{{ $item->judul }}</a></h6>
                                     </div>
                                     <div class="entry-meta">
                                         <ul>
@@ -109,38 +109,29 @@
         </div>
     </div>
     <div class="section">
-        <div class="container">
+        <div class="container mt-4">
             <div class="d-flex justify-content-between">
                 <h3 class="font-secondary fw-medium m-0">Galeri</h3>
                 <a href="{{ route('gallery.index') }}" class="btn btn-sm btn-outline-secondary">Lihat lebih banyak <i
                         class="icon-line-arrow-right"></i></a>
             </div>
             <hr class="text-dark">
-            <div class="row posts-md col-mb-30">
-                <div class="masonry-thumbs grid-container grid-4 has-init-isotope" data-big="3" data-lightbox="gallery"
-                     style="position: relative; height: 295.664px;">
-                    @foreach ($galeri->take(8) as $item)
-                        @if (!empty($item->file))
-                            <a class="grid-item" href="{{ asset('galeri/' . $item->file) }}"
-                               data-lightbox="gallery-item"
-                               style="position: absolute; left: 0%; top: 0px;">
-                                <div class="grid-inner">
-                                    <img src="{{ asset('galeri/' . $item->file) }}" alt="Gallery">
-                                    <div class="bg-overlay">
-                                        <div class="bg-overlay-content dark">
-                                            <i class="icon-line-plus h4 mb-0 animated fadeOut"
-                                               data-hover-animate="fadeIn"
-                                               style="animation-duration: 600ms;"></i>
-                                        </div>
-                                        <div class="bg-overlay-bg dark animated fadeOut" data-hover-animate="fadeIn"
-                                             style="animation-duration: 600ms;"></div>
+                                        <div class="row">
+              @foreach ($galeri->take(8) as $item)
+                       @if (!empty($item->file))
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="widget-content">
+                                        <figure class="image-box"><a class="lightbox-image"
+                                                                     href="{{ asset('galeri/' . $item->file) }}"><img
+                                                    src="{{ asset('galeri/' . $item->file) }}" alt=""></a>
+                                        </figure>
                                     </div>
                                 </div>
-                            </a>
+                           
                         @endif
                     @endforeach
-                </div>
-            </div>
+                     </div>
         </div>
     </div>
 @endsection

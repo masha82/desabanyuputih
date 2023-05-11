@@ -26,15 +26,15 @@
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label>Nama Laporan:</label>
-                                <input type="text" name="nama_laporan" id="nama_laporan" class="form-control">
+                                <input type="text" name="nama_laporan" id="nama_laporan" class="form-control" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Tahun:</label>
-                                <input type="text" name="tahun" id="tahun" class="form-control">
+                                <input type="text" name="tahun" id="tahun" class="form-control" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Upload Foto:</label>
-                                <input type="file" class="form-control" name="file" id="file"/>
+                                <input type="file" class="form-control" name="file" id="file" required>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>

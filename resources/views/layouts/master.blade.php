@@ -53,7 +53,8 @@
 					<!-- Social Box -->
 					<ul class="header-social_box">
 						<li><a href="https://www.facebook.com/Banyuputihdesaku/" class="fa-brands fa-facebook-f fa-fw"></a></li>
-						<li><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li>
+						{{-- <li><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li> --}}
+						<li><a href="https://www.youtube.com/@DesaBanyuputih" class="fa-solid fa-youtube fa-fw"></a></li>
 					</ul>
 					
 				</div>

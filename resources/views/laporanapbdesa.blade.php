@@ -12,24 +12,20 @@
             </div>
         </div>
     </div>
-    <div class="row posts-md col-mb-30">
+        <div class="row posts-md col-mb-30 mt-4">
         <div class="masonry-thumbs grid-container grid-4 has-init-isotope" data-big="3" data-lightbox="gallery"
              style="position: relative; height: 295.664px;">
-            @foreach ($laporan as $item)
-                <a class="grid-item" href="{{ asset('foto_laporan/' . $item->file) }}" data-lightbox="gallery-item"
-                   style="position: absolute; left: 0%; top: 0px;">
-                   <div class="case-block_inner">
-                    <div class="case-block_image">
-                        <img src="{{ asset('foto_laporan/' . $item->file) }}" alt="" />
-                        <div class="case-one_overlay">
-                            <div class="case-one_overlay-content">
-                                <a href="{{ asset('foto_laporan/' . $item->file) }}" class="case-block_plus lightbox-image plus fa fa-plus"></a>
-                            </div>
+           <div class="row">
+                @foreach ($laporan as $item)
+                    <div class="col-lg-4 col-md-4">
+                        <div class="widget-content">
+                            <figure class="image-box"><a class="lightbox-image"
+                                                         href="{{ asset('foto_laporan/' . $item->file) }}"><img
+                                        src="{{ asset('foto_laporan/' . $item->file) }}" alt=""></a></figure>
                         </div>
                     </div>
-                   </div>
-                </a>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

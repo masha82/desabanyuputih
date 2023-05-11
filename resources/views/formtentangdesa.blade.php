@@ -27,11 +27,11 @@
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label>Isi Tentang Desa:</label>
-                                <textarea class="summernote" name="isi"></textarea>
+                                <textarea class="summernote" name="isi" required></textarea>
                             </div><br>
                             <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Upload Foto:</label>
-                                <input type="file" class="form-control" name="foto_desa" id="foto_desa"/>
+                                <input type="file" class="form-control" name="foto_desa" id="foto_desa" required>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>
@@ -41,14 +41,13 @@
                 </div>
                 <br><br>
                 <div class="row">
-                    <h6 class="text-center">Daftar Laporan APBDes</h6>
+                    <h6 class="text-center">Tentang Desa</h6>
                     <div>
                         <table class="table table-striped" id="myTable">
                             <thead>
                             <tr>
-                                <th>Nama Laporan</th>
-                                <th>Tahun</th>
-                                <th>Gambar</th>
+                                <th>Tentang</th>
+                                <th>Foto</th>
                                 <th>Aksi</th>
                             </tr>
                             </thead>

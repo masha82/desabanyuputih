@@ -18,7 +18,7 @@ class HeaderController extends Controller
     protected $model = FotoHeader::class;
     public function index()
     {
-        $header = FotoHeader::orderBy('created_at', 'DESC')->get();
+        $header = FotoHeader::orderBy('created_at', 'ASC')->first();
         return view('headerfoto', compact('header'));
     }
 

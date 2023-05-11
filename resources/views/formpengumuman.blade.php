@@ -26,27 +26,27 @@
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label>Judul Pengumuman:</label>
-                                <input type="text" name="judul" id="judul" class="form-control">
+                                <input type="text" name="judul" id="judul" class="form-control" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Kategori Pengumuman:</label>
-                                <input type="text" name="kategori" id="kategori" class="form-control">
+                                <input type="text" name="kategori" id="kategori" class="form-control" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Isi Pengumuman:</label>
-                                <textarea class="summernote" name="isi"></textarea>
+                                <textarea class="summernote" name="isi" required></textarea>
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Thumbnail Pengumuman:</label>
-                                <input type="file" class="form-control" name="thumbnail" id="thumbnail"/>
+                                <input type="file" class="form-control" name="thumbnail" id="thumbnail" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label">Upload Dokumen:</label>
-                                <input type="file" class="form-control" name="file" id="file"/>
+                                <input type="file" class="form-control" name="file" id="file" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Sumber:</label>
-                                <input type="text" name="sumber" id="sumber" class="form-control">
+                                <input type="text" name="sumber" id="sumber" class="form-control" required>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>
