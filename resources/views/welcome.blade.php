@@ -56,7 +56,7 @@
                                                                  alt="Image 3"></a>
                         </div>
                         <div class="entry-title">
-                            <h3><a href="{{ route('news.show', $berita->first()->id) }}"
+                            <h3><a href="{{ route('news.show', $berita->first()->slug) }}"
                                    class="stretched-link color-underline"><span>{{ $berita->first()->judul }}</span></a>
                             </h3>
                         </div>

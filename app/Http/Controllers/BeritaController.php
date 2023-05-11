@@ -6,6 +6,7 @@ use App\Models\Berita;
 use App\Traits\Table;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Str;
 
 class BeritaController extends Controller
 {
@@ -41,11 +42,13 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
+        $slug = Str::slug($request->judul,'-');
         $data = $request->all();
         $file = $request->file('file');
         $new_name = rand() . '.' . $file->getClientOriginalExtension();
         $file->move(public_path("gambar"), $new_name);
         $data['file'] = $new_name;
+        $data['slug'] = $slug;
         $data = Berita::create($data);
         return redirect()->back()->with(['success' => 'Data berhasil disimpan.']);
     }
@@ -59,7 +62,7 @@ class BeritaController extends Controller
     public function show($id)
     {
         $berita = Berita::all()->take(5);
-        $data = Berita::findOrFail($id);
+        $data = Berita::where('slug',$id)->first();
         return view('shownews', compact('data','berita'));
     }
 
@@ -93,6 +96,7 @@ class BeritaController extends Controller
         $data->kategori=$request->kategori;
         $data->isi=$request->isi;
         $data->file=$new_name;
+        $data->slug=Str::of('judul')->slug('-');
         $data->sumber=$request->sumber;
         $data->editor=$request->editor;
         $data->update();
