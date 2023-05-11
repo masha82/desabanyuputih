@@ -86,8 +86,8 @@
                                 <div class="col-md-8">
                                     <div class="entry-title title-xs">
                                         {{-- <div class="entry-categories"><a href="#">Market</a></div> --}}
-                                        <h6><a href="{{route('news.show', $item->id)}}"
-                                               class="stretched-link color-underline">{{ $item->judul }}</a></h6>
+                                        <h3><a href="{{route('news.show', $item->id)}}"
+                                               class="stretched-link color-underline">{{ $item->judul }}</a></h3>
                                     </div>
                                     <div class="entry-meta">
                                         <ul>
